@@ -1,8 +1,7 @@
 HELP.md
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+META-INF/
+!/src/main//target/
 
 ### STS ###
 .apt_generated
@@ -26,8 +25,7 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+!/src/main//build/
 
 ### VS Code ###
 .vscode/
