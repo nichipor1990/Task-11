@@ -1,7 +1,6 @@
 package ru.itmentor.spring.boot_security.demo.model;
 
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -19,8 +18,8 @@ public class User {
     @Column(name = "lastname")
     private String lastname;
 
-    @Column(name ="email")
-    private String email;
+    @Column(name = "username", unique = true)
+    private String username;
 
     @Column(name = "password")
     private String password;
@@ -72,11 +71,11 @@ public class User {
         this.roles = roles;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

@@ -8,11 +8,19 @@
 <p th:text="${user.getId()}"></p>
 <p th:text="${user.getName()}"></p>
 <p th:text="${user.getLastname()}"></p>
-<a th:href="@{/users}">Go Back</a>
+<p th:text="${user.getUsername()}"></p>
+<p th:text="${user.getPassword()}"></p>
+<p>
+    <th:block th:each="rol : ${user.getRoles()}" th:text="${rol.getName() + ' ' }"/>
+</p>
+<a th:href="@{/admin/users}">Go Back</a>
 <br/>
-<a th:href="@{/users/{id}/edit(id=${user.getId})}">Edit</a>
-<form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId})}">
+<a th:href="@{/admin/users/{id}/edit(id=${user.getId})}">Edit</a>
+<form th:method="DELETE" th:action="@{/admin/users/{id}(id=${user.getId})}">
     <input type="submit" value="Delete"/>
+</form>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
 </form>
 </body>
 </html>
