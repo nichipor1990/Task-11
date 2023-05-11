@@ -15,6 +15,6 @@ public class UserController {
     public String showUser(Model model) {
         UserDetailsImpl userDetails = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         model.addAttribute("user", userDetails.getUser());
-        return "user_info";
+        return "user";
     }
 }

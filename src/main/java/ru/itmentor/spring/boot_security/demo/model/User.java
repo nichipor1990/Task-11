@@ -18,8 +18,11 @@ public class User {
     @Column(name = "lastname")
     private String lastname;
 
-    @Column(name = "username", unique = true)
-    private String username;
+    @Column(name = "age")
+    private int age;
+
+    @Column(name = "email", unique = true)
+    private String email;
 
     @Column(name = "password")
     private String password;
@@ -71,11 +74,19 @@ public class User {
         this.roles = roles;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
